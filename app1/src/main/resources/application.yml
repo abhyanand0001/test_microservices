@@ -1,0 +1,6 @@
+management:
+  server:
+    port: 8080
+Spring:
+  Application:
+    name: app1

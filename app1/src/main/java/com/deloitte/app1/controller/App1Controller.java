@@ -1,6 +1,7 @@
 package com.deloitte.app1.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -9,9 +10,9 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/v1/app1")
 public class App1Controller {
 
-    @GetMapping("/method1")
-    public String method1(){
-        return "Method 1 from app1";
+    @GetMapping("/method1/{message}")
+    public String method1(@PathVariable String message){
+        return message;
     }
 
     @GetMapping("/callapp2")

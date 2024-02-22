@@ -16,7 +16,7 @@ public class App1Controller {
     }
 
     @GetMapping("/callapp2")
-    public String getFromAnotherApp(){
+    public String getFromAnotherMicroservice(){
         String uri = "http://localhost:8081/v1/app2/method1";
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(uri, String.class);
